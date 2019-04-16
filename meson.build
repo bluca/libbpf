@@ -45,7 +45,6 @@ libbpf_includes = include_directories(
         join_paths(libbpf_source_dir, 'include'),
         join_paths(libbpf_source_dir, 'include/uapi'))
 
-libelf = dependency('libelf')
 libelf = dependency('libelf', required: false)
 if not libelf.found()
         libelf = cc.find_library('elf', required: true)
