@@ -83,7 +83,7 @@ $(OBJDIR)/libbpf.so.$(LIBBPF_VERSION): $(OBJS)
 
 $(OBJDIR)/libbpf.pc:
 	sed -e "s|@PREFIX@|$(PREFIX)|" \
-		-e "s|@LIBDIR@|$(LIBDIR)|" \
+		-e "s|@LIBDIR@|$(LIBSUBDIR)|" \
 		-e "s|@VERSION@|$(LIBBPF_VERSION)|" \
 		< libbpf.pc.template > $@
 
